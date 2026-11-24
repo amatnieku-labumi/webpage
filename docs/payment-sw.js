@@ -1,7 +1,7 @@
 // Service worker that stages the "payment service outage" incident.
 //
 // GitHub Pages can only answer 200/404, so this worker intercepts the
-// navigation to 503.html, keeps it pending for a few seconds (the browser tab
+// navigation to payment-unavailable.html, keeps it pending for a few seconds (the browser tab
 // shows its loading spinner the whole time), then answers with the page's
 // content and a real "503 Service Unavailable" status, as seen in DevTools.
 // Every other request goes to the network untouched.
@@ -19,7 +19,7 @@ self.addEventListener('activate', function (event) {
 self.addEventListener('fetch', function (event) {
     var request = event.request;
     if (request.mode !== 'navigate') return;
-    if (!/\/503\.html$/.test(new URL(request.url).pathname)) return;
+    if (!/\/payment-unavailable\.html$/.test(new URL(request.url).pathname)) return;
 
     event.respondWith(
         new Promise(function (resolve) { setTimeout(resolve, DELAY_MS); })

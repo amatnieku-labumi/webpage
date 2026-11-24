@@ -68,7 +68,7 @@
         empty.hidden = false;
     });
 
-    // "Payment outage" incident: payment-sw.js holds the navigation to 503.html
+    // "Payment outage" incident: payment-sw.js holds the navigation to payment-unavailable.html
     // for a few seconds (tab spinner) and then answers with a real 503 status.
     // Without service worker support the page still opens, just with a 200.
     var workerReady = Promise.resolve();
