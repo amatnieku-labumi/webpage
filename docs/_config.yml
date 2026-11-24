@@ -1,0 +1,7 @@
+# Jekyll config for the GitHub Pages version of the shop.
+# All links in the site are relative, so it works both as a user site
+# (username.github.io) and as a project site (username.github.io/repo/).
+title: Amatnieku labumi
+lang: lv
+exclude:
+  - static/css/style.scss

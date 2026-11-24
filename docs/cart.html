@@ -1,0 +1,47 @@
+---
+layout: default
+title: Iepirkuma grozs
+scripts: [cart.js]
+---
+    <div class="container cart-page">
+
+        <h2>Iepirkuma grozs</h2>
+
+        <!-- filled by static/js/cart.js from the cart in localStorage -->
+        <div id="cartFilled" hidden>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Prece</th>
+                        <th>Nosaukums</th>
+                        <th>Cena</th>
+                        <th>Skaits</th>
+                        <th>Kopā</th>
+                    </tr>
+                </thead>
+
+                <tbody id="cartRows"></tbody>
+            </table>
+
+            <div class="cart-bottom">
+                <h3>Kopā: €<span id="cartTotal">0.00</span></h3>
+
+                <a href="#" id="emptyCart" class="empty-cart-button">
+                    Iztukšot grozu
+                </a>
+
+                <a href="https://shoopflow.github.io/payment-portal/" id="payButton" class="pay-button">
+                    Pay
+                </a>
+            </div>
+        </div>
+
+        <div id="cartEmpty" hidden>
+            <p>Jūsu grozs ir tukšs.</p>
+
+            <a href="catalogue.html" class="pay-button">
+                Tuprināt iepirkties
+            </a>
+        </div>
+
+    </div>
